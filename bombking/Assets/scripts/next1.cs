@@ -15,12 +15,12 @@ public class next1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("n")) 
+        if (Input.GetKeyDown("t")) 
         {
             SceneManager.LoadScene("bkscene2");
             Time.timeScale = 1;
         }
-        if (Input.GetKeyDown("n") && EnemyCount.enemy < 3)
+        if (Input.GetKeyDown("t") && EnemyCount.win ==  true)
         {
             SceneManager.LoadScene("bkscene1");
             Time.timeScale = 1;
