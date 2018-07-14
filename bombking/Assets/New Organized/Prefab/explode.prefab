@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dead: {fileID: 1157775426720582, guid: 3dc13cc7def59294d8d42c2f9d84c19d, type: 2}
+  testTile: {fileID: 0}
 --- !u!212 &212882999257153324
 SpriteRenderer:
   m_ObjectHideFlags: 1
