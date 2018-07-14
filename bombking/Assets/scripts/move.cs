@@ -5,6 +5,7 @@ using UnityEngine;
 public class move : MonoBehaviour {
     public static  float speed = 7;
     public static bool facingRight = true;
+    public static bool directionL, directionR, directionU, directionD = false;
   
     
     // Use this for initialization
@@ -31,7 +32,37 @@ public class move : MonoBehaviour {
             timer.maxtime += 3;
             timer.timeleft += 3;
         }
-     
+     //check direction
+        if (Input.GetKeyUp(KeyCode.LeftArrow)){
+            //Debug.Log("Left");
+            directionU = false;
+            directionD = false;
+            directionL = true;
+            directionR = false;
+
+        }
+        else if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            directionU = false;
+            directionD = false;
+            directionL = false;
+            directionR = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            directionU = true;
+            directionD = false;
+            directionL = false;
+            directionR = false;
+        }
+        else if (Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            directionU = false;
+            directionD = true;
+            directionL = false;
+            directionR = false;
+        }
+            
     }
 
     

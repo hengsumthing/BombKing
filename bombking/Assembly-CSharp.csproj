@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{998FB10A-4FD5-960A-182C-8C5140D70D7C}</ProjectGuid>
+    <ProjectGuid>{F7A8774F-95F7-4D32-4D02-CF1BCF3D165B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\New Organized\Scripts\camreascript.cs" />
     <Compile Include="Assets\New Organized\Scripts\sbombcontroller.cs" />
     <Compile Include="Assets\scripts\bbomb.cs" />
     <Compile Include="Assets\scripts\bbombcontroller.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Assets\scripts\Bombdrop.cs" />
     <Compile Include="Assets\scripts\BombDrop2.cs" />
     <Compile Include="Assets\scripts\bombpickup.cs" />
+    <Compile Include="Assets\scripts\camreacontroller.cs" />
     <Compile Include="Assets\scripts\carrot.cs" />
     <Compile Include="Assets\scripts\carrot2.cs" />
     <Compile Include="Assets\scripts\carrot3.cs" />
@@ -90,16 +92,16 @@
     <Compile Include="Assets\scripts\startgame.cs" />
     <Compile Include="Assets\scripts\timer.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>/Users/Heng/Downloads/bombkingv2.7.2/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>/Users/Heng/Documents/BombKing/bombking/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/Heng/Downloads/bombkingv2.7.2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/Heng/Documents/BombKing/bombking/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/Heng/Downloads/bombkingv2.7.2/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/Heng/Documents/BombKing/bombking/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/Heng/Downloads/bombkingv2.7.2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/Heng/Documents/BombKing/bombking/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
