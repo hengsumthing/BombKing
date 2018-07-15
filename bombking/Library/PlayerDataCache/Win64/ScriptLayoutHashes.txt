@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Heng/Desktop/bombkingv2.7.exe
+C:/Users/Dad/Documents/github/BombKing/bombking/bombkingv2.7.exe
 SceneListBegin?
 Assets/Level_1.unity
 SceneListEnd?

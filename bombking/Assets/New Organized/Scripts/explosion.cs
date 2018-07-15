@@ -28,6 +28,8 @@ public class explosion : MonoBehaviour {
                 Debug.Log("Total" + EnemyCount.totalEnemies);
 
                 Debug.Log("Count" + EnemyCount.enemyKilled);
+                GameObject fire = (GameObject)Instantiate(dead, co.gameObject.transform.position, Quaternion.identity);
+               Destroy(fire, 0.5f);
 
 
             }

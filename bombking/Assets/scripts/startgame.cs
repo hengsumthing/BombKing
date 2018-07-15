@@ -14,7 +14,7 @@ public class startgame : MonoBehaviour {
 	void Update () {
         if(Input.anyKey)
         {
-            SceneManager.LoadScene("bkscene1");
+            SceneManager.LoadScene("tutorial");
             Time.timeScale = 1;
         }
 		

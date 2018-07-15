@@ -17,7 +17,7 @@ public class GoalReached : EnemyCount
     }
     void OnTriggerEnter2D(Collider2D co)
     {
-          if (co.gameObject.gameObject.tag == "kim")
+          if (co.gameObject.tag == "kim")
         {
             Debug.Log("hi winner");
             winn.enabled = true;
