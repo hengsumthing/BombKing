@@ -8,7 +8,7 @@ public class GoalReached : EnemyCount
 
     // Use this for initialization
     void Start () {
-        GameObject finishLine;
+       
     }
 	
 	// Update is called once per frame
