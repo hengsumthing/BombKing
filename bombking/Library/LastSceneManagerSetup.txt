@@ -1,4 +1,16 @@
 sceneSetups:
-- path: Assets/Level_1.unity
+- path: Assets/Scenes/Level_1.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Scenes/bkscene1.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Scenes/bkscene2.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Scenes/title.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Scenes/tutorial.unity
   isLoaded: 1
   isActive: 1
