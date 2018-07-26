@@ -53,6 +53,7 @@ public class sbombcontroller : MonoBehaviour
                 bomb1.gameObject.SetActive(false);
                 bomb2.gameObject.SetActive(false);
                 bomb3.gameObject.SetActive(false);
+                
                 break;
 
 
