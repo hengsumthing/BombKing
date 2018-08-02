@@ -62,6 +62,10 @@ public class move : MonoBehaviour {
             directionL = false;
             directionR = false;
         }
+
+        //move over bomb
+
+
             
     }
 
