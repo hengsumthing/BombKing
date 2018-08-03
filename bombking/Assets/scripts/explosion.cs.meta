@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: c881a8c3650fdfb46a5ab56409cf2c1c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - dead: {instanceID: 0}
+  - testTile: {fileID: 11400000, guid: 928a21bb7522b244ab0afb62594c6cd3, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
