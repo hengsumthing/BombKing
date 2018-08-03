@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class bomb : MonoBehaviour {
     public GameObject explosionPrefab;
-  
     
+    
+
+    void Update()
+    {
+      
+    }
 
     void OnDestroy()
     {

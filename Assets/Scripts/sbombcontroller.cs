@@ -7,7 +7,7 @@ public class sbombcontroller : MonoBehaviour
 {
     public GameObject bomb1, bomb2, bomb3;
     public static int smbomb;
-
+    public static float reload = 7;
 
 
     // Use this for initialization
@@ -59,6 +59,22 @@ public class sbombcontroller : MonoBehaviour
 
         }
 
+        // reload use coroutine
+        
+
+        if (sbombcontroller.smbomb < 3) 
+        {
+            
+            reload -= Time.deltaTime;
+            Debug.Log("reload" + reload);
+            if (reload <= 0)
+            {
+
+                sbombcontroller.smbomb += 1;
+                reload = 7;
+                
+            }
+        }
     }
 }
 

@@ -56,6 +56,8 @@
      <Compile Include="Assets\Scripts\bomb.cs" />
      <Compile Include="Assets\Scripts\Bombdrop.cs" />
      <Compile Include="Assets\Scripts\bombpickup.cs" />
+     <Compile Include="Assets\Scripts\BossAttack.cs" />
+     <Compile Include="Assets\Scripts\BossController.cs" />
      <Compile Include="Assets\Scripts\camerascript.cs" />
      <Compile Include="Assets\Scripts\camreacontroller.cs" />
      <Compile Include="Assets\Scripts\camreascript.cs" />
