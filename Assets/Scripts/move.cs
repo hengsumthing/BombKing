@@ -14,7 +14,7 @@ public class move : MonoBehaviour {
 	}
     private void Update()
     {
-        if (Input.GetKeyDown("b"))
+        if (Input.GetKeyDown(KeyCode.B))
         {
         //    bbombcontroller.bbomb -= 1;
         //    GetComponent<BombDrop2>();
@@ -34,7 +34,7 @@ public class move : MonoBehaviour {
             timer.timeleft += 3;
         }
      //check direction
-        if (Input.GetKeyUp(KeyCode.LeftArrow)){
+        if (Input.GetKeyDown(KeyCode.LeftArrow)){
             //Debug.Log("Left");
             directionU = false;
             directionD = false;
@@ -42,21 +42,21 @@ public class move : MonoBehaviour {
             directionR = false;
 
         }
-        else if (Input.GetKeyUp(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             directionU = false;
             directionD = false;
             directionL = false;
             directionR = true;
         }
-        else if (Input.GetKeyUp(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             directionU = true;
             directionD = false;
             directionL = false;
             directionR = false;
         }
-        else if (Input.GetKeyUp(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             directionU = false;
             directionD = true;
