@@ -66,7 +66,7 @@ public class sbombcontroller : MonoBehaviour
         {
             
             reload -= Time.deltaTime;
-            Debug.Log("reload" + reload);
+            //Debug.Log("reload" + reload);
             if (reload <= 0)
             {
 

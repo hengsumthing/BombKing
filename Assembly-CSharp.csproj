@@ -61,7 +61,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\enableBoss.cs" />
     <Compile Include="Assets\Scripts\bomb.cs" />
     <Compile Include="Assets\Scripts\Bombdrop.cs" />
     <Compile Include="Assets\Scripts\bombpickup.cs" />
@@ -71,6 +70,7 @@
     <Compile Include="Assets\Scripts\camreacontroller.cs" />
     <Compile Include="Assets\Scripts\camreascript.cs" />
     <Compile Include="Assets\Scripts\DestroyAfter.cs" />
+    <Compile Include="Assets\Scripts\enableBoss.cs" />
     <Compile Include="Assets\Scripts\EnemyCount.cs" />
     <Compile Include="Assets\Scripts\explosion.cs" />
     <Compile Include="Assets\Scripts\GameControlScript.cs" />
