@@ -33,6 +33,11 @@ public class explosion : MonoBehaviour {
 
 
             }
+
+            if (co.gameObject.gameObject.tag == "boss"){
+                BossController.bosshp -= 1;
+            }
+
             else if(co.gameObject.gameObject.tag== "bomb")
             {
                 Destroy(co.gameObject);
@@ -43,6 +48,8 @@ public class explosion : MonoBehaviour {
             {
                 GameControlScript.health -=1;
             }
+
+
             else
             {
                 

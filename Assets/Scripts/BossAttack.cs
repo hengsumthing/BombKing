@@ -19,5 +19,8 @@ public class BossAttack : MonoBehaviour {
         {
             GameControlScript.health -= 1;
         }
+        if(co.tag == "bomb"){
+            Destroy(co.gameObject);
+        }
     }
 }

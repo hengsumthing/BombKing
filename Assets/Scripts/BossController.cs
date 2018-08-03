@@ -11,6 +11,8 @@ public class BossController : MonoBehaviour {
     public static float timeleft = 0;
     public GameObject bossattack;
 
+    public static int bosshp = 2;
+
     // Use this for initialization
     void Start () {
         timeleft =attacktimer;
@@ -18,6 +20,13 @@ public class BossController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        //hp
+        if (bosshp == 0){
+            Destroy(gameObject);
+        }
+
+        // movement
         var step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 

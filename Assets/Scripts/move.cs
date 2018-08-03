@@ -7,22 +7,23 @@ public class move : MonoBehaviour {
     public static bool facingRight = true;
     public static bool directionL, directionR, directionU, directionD = false;
   
-    
+    public GameObject crossexplosion;
     // Use this for initialization
     void Start () {
 		
 	}
     private void Update()
     {
-        //if (Input.GetKeyDown("b"))
-        //{
+        if (Input.GetKeyDown("b"))
+        {
         //    bbombcontroller.bbomb -= 1;
         //    GetComponent<BombDrop2>();
         //    GetComponent<timer>();
         //    timer.maxtime += 6;
         //    timer.timeleft += 6;
+        Instantiate(crossexplosion, transform.position, Quaternion.identity);
 
-        //}
+        }
     
         if(Input.GetKeyDown(KeyCode.Space))
         {

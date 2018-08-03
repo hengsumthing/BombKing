@@ -10,6 +10,7 @@ TagManager:
   - monster
   - bomb
   - explosion
+  - boss
   layers:
   - Default
   - TransparentFX
