@@ -15,10 +15,21 @@ public class bomb : MonoBehaviour {
 
 
     }
+    void OnStart()
+    {
+        
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        other.GetComponent<Collider2D>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
+        Debug.Log("enter");
         //circol.enabled = false;
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        GetComponent<Collider2D>().enabled = true;
+        Debug.Log("exit");
     }
 }
