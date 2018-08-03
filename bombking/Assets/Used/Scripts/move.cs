@@ -12,19 +12,21 @@ public class move : MonoBehaviour {
     void Start () {
 		
 	}
-    private void Update()
+    private void FixedUpdate()
     {
-        if (Input.GetKeyDown("b"))
-        {
-            bbombcontroller.bbomb -= 1;
-            GetComponent<BombDrop2>();
-            GetComponent<timer>();
-            timer.maxtime += 6;
-            timer.timeleft += 6;
+        float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");
+        GetComponent<Rigidbody2D>().velocity = new Vector2(h, v) * speed;
 
-        }
-    
-        if(Input.GetKeyDown(KeyCode.Space))
+        GetComponent<Animator>().SetInteger("X", (int)h);
+        GetComponent<Animator>().SetInteger("Y", (int)v);
+
+        if (h > 0 && !facingRight) { Flip(); }
+
+        else if (h < 0 && facingRight)
+        { Flip(); }
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             sbombcontroller.smbomb -= 1;
             GetComponent<Bombdrop>();
@@ -72,20 +74,20 @@ public class move : MonoBehaviour {
     
 
     // Update is called once per frame
-    void FixedUpdate () {
-        // Check Input Axes
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
-        GetComponent<Rigidbody2D>().velocity = new Vector2(h, v) * speed;
+    //void FixedUpdate () {
+    //    // Check Input Axes
+    //    float h = Input.GetAxisRaw("Horizontal");
+    //    float v = Input.GetAxisRaw("Vertical");
+    //    GetComponent<Rigidbody2D>().velocity = new Vector2(h, v) * speed;
 
-        GetComponent<Animator>().SetInteger("X", (int)h);
-        GetComponent<Animator>().SetInteger("Y", (int)v);
+    //    GetComponent<Animator>().SetInteger("X", (int)h);
+    //    GetComponent<Animator>().SetInteger("Y", (int)v);
 
-        if (h > 0 && !facingRight) { Flip(); }
+    //    if (h > 0 && !facingRight) { Flip(); }
              
-        else if (h < 0 && facingRight)
-              { Flip(); }
-    }
+    //    else if (h < 0 && facingRight)
+    //          { Flip(); }
+    //}
     void OnTriggerEnter2D(Collider2D other)
     {
        // if (other.tag == "monster")
