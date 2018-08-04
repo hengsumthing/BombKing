@@ -7,7 +7,7 @@ public class BossController : MonoBehaviour {
     public float speed;
     public static bool facingRight = true;
 
-    public static float attacktimer = 7;
+    public static float attacktimer = 5;
     public static float timeleft = 0;
     public GameObject bossattack;
 

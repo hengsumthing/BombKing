@@ -15,6 +15,8 @@ public class explosion : MonoBehaviour {
 	void Update () {
 		
 	}
+
+
     void OnTriggerEnter2D(Collider2D co)
     {
         //Debug.Log("trigger enter test");
@@ -47,6 +49,8 @@ public class explosion : MonoBehaviour {
             else if (co.tag == "kim")
             {
                 GameControlScript.health -=1;
+
+                StartCoroutine("Flasher");
             }
 
 
@@ -96,11 +100,16 @@ public class explosion : MonoBehaviour {
     //        Destroy(gameObject);
     //    }
     //}
-    void OnTriggerStay2D(Collider2D co)
+    IEnumerator Flasher()
     {
-        
+        for (int i = 0; i <= 10; i++)
         {
-            
+           
+
+            GameObject.Find("Player").GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
+            yield return new WaitForSeconds(.1f);
+            GameObject.Find("Player").GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
+            yield return new WaitForSeconds(.1f);
         }
     }
 
