@@ -38,6 +38,9 @@ public class explosion : MonoBehaviour {
 
             if (co.gameObject.gameObject.tag == "boss"){
                 BossController.bosshp -= 1;
+                BossTakesDamage();
+                //Debug.Log(BossController.bosshp);
+
             }
 
             else if(co.gameObject.gameObject.tag== "bomb")
@@ -48,9 +51,9 @@ public class explosion : MonoBehaviour {
             }
             else if (co.tag == "kim")
             {
-                GameControlScript.health -=1;
+                GameControlScript.health -= 1;
+                PlayerTakesDamage();
 
-                StartCoroutine("Flasher");
             }
 
 
@@ -100,12 +103,21 @@ public class explosion : MonoBehaviour {
     //        Destroy(gameObject);
     //    }
     //}
-    IEnumerator Flasher()
+
+    public void PlayerTakesDamage(){
+        StartCoroutine("PlayerFlasher");
+    }
+
+    public void BossTakesDamage(){
+        StartCoroutine("BossFlasher");
+    }
+  
+
+    public IEnumerator PlayerFlasher()
     {
         for (int i = 0; i <= 10; i++)
         {
-           
-
+            
             GameObject.Find("Player").GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
             yield return new WaitForSeconds(.1f);
             GameObject.Find("Player").GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
@@ -113,6 +125,17 @@ public class explosion : MonoBehaviour {
         }
     }
 
+    public IEnumerator BossFlasher()
+    {
+        for (int i = 0; i <= 10; i++)
+        {
+
+            GameObject.Find("boss_16").GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
+            yield return new WaitForSeconds(.1f);
+            GameObject.Find("boss_16").GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
+            yield return new WaitForSeconds(.1f);
+        }
+    }
 
 }
  

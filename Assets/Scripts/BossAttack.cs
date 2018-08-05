@@ -18,6 +18,9 @@ public class BossAttack : MonoBehaviour {
         if (co.tag == "kim")
         {
             GameControlScript.health -= 1;
+
+            //co.GetComponent<explosion>().PlayerTakesDamage();
+            GameObject.Find("Explosion").GetComponent<explosion>().PlayerTakesDamage();
         }
         if(co.tag == "bomb"){
             Destroy(co.gameObject);
