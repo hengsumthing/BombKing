@@ -105,4 +105,21 @@ public class move : MonoBehaviour {
 
 
     }
+
+    public void PlayerTakesDamage()
+    {
+        StartCoroutine("PlayerFlasher");
+    }
+
+    public IEnumerator PlayerFlasher()
+    {
+        for (int i = 0; i <= 5; i++)
+        {
+
+            GameObject.Find("Player").GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
+            yield return new WaitForSeconds(.1f);
+            GameObject.Find("Player").GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
+            yield return new WaitForSeconds(.1f);
+        }
+    }
 }

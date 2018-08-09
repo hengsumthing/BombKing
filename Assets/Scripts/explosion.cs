@@ -6,15 +6,15 @@ using UnityEngine.Tilemaps;
 public class explosion : MonoBehaviour {
     public GameObject dead;
     public Tile testTile;
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
 		//
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+    }
 
 
     void OnTriggerEnter2D(Collider2D co)
@@ -38,7 +38,7 @@ public class explosion : MonoBehaviour {
 
             if (co.gameObject.gameObject.tag == "boss"){
                 BossController.bosshp -= 1;
-                BossTakesDamage();
+                //BossTakesDamage();
                 //Debug.Log(BossController.bosshp);
 
             }
@@ -52,7 +52,7 @@ public class explosion : MonoBehaviour {
             else if (co.tag == "kim")
             {
                 GameControlScript.health -= 1;
-                PlayerTakesDamage();
+                co.GetComponent<move>().PlayerTakesDamage();
 
             }
 
@@ -87,55 +87,28 @@ public class explosion : MonoBehaviour {
     }
 
 
-    //void OnTriggerExit2D(Collider2D other)
-    //{
-    //    if (other.tag == "kim")
-    //    {
-    //        GameControlScript.health = 0;
-    //    }
-    //    if(other.tag== "enemy")
-    //    {
-    //        Destroy(other.gameObject);
-    //        //GameObject fire = (GameObject)Instantiate(dead, other.gameObject.transform.position, Quaternion.identity);
-    //        //Destroy(fire, 0.5f);
-    //        EnemyCount.enemy += 1; 
-    //        //Score.score +=1 ;
-    //        Destroy(gameObject);
-    //    }
-    //}
 
-    public void PlayerTakesDamage(){
-        StartCoroutine("PlayerFlasher");
-    }
 
-    public void BossTakesDamage(){
-        StartCoroutine("BossFlasher");
-    }
   
 
-    public IEnumerator PlayerFlasher()
-    {
-        for (int i = 0; i <= 10; i++)
-        {
-            
-            GameObject.Find("Player").GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
-            yield return new WaitForSeconds(.1f);
-            GameObject.Find("Player").GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
-            yield return new WaitForSeconds(.1f);
-        }
-    }
+    //public void BossTakesDamage(){
+    //    StartCoroutine("BossFlasher");
+    //}
+  
 
-    public IEnumerator BossFlasher()
-    {
-        for (int i = 0; i <= 10; i++)
-        {
 
-            GameObject.Find("boss_16").GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
-            yield return new WaitForSeconds(.1f);
-            GameObject.Find("boss_16").GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
-            yield return new WaitForSeconds(.1f);
-        }
-    }
+
+    //public IEnumerator BossFlasher()
+    //{
+    //    for (int i = 0; i <= 10; i++)
+    //    {
+
+    //        GameObject.Find("boss_16").GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
+    //        yield return new WaitForSeconds(.1f);
+    //        GameObject.Find("boss_16").GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
+    //        yield return new WaitForSeconds(.1f);
+    //    }
+    //}
 
 }
  

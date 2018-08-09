@@ -5,11 +5,13 @@ using UnityEngine;
 public class minion : MonoBehaviour
 {
     public float speed = 2;
+    public static bool facingRight = true;
 
     // Use this for initialization
     void Start()
     {
         InvokeRepeating("changeDir", 0, 0.5f);
+       
     }
 
     // Update is called once per frame
@@ -40,15 +42,21 @@ public class minion : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = dir * speed;
             GetComponent<Animator>().SetInteger("X", (int)dir.x);
             GetComponent<Animator>().SetInteger("Y", (int)dir.y);
+
+          
         }
     }
+
+   
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "kim")
         {
-            GameControlScript.health  -=1;
-        }
-        
+            GameControlScript.health -= 1;
 
+            other.GetComponent<move>().PlayerTakesDamage();
         }
+
+
+    }
 }
