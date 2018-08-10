@@ -1,8 +1,8 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/300916978/Desktop/bombkingv2.7.exe
+C:/Users/paulo/Desktop/build/bombkingv2.7.exe
 SceneListBegin?
-Assets/Scenes/Level_1.unity
+Assets/Scenes/level_3.unity
 SceneListEnd?
 5b9b2f59726c6ff8c5be027e767006cf Assembly-CSharp.dll:.camreacontroller
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret

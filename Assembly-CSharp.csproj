@@ -61,7 +61,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Popup.cs" />
     <Compile Include="Assets\Scripts\bomb.cs" />
     <Compile Include="Assets\Scripts\Bombdrop.cs" />
     <Compile Include="Assets\Scripts\bombpickup.cs" />
@@ -82,6 +81,7 @@
     <Compile Include="Assets\Scripts\next1.cs" />
     <Compile Include="Assets\Scripts\PickupBomb.cs" />
     <Compile Include="Assets\Scripts\PlayerLife.cs" />
+    <Compile Include="Assets\Scripts\Popup.cs" />
     <Compile Include="Assets\Scripts\restart.cs" />
     <Compile Include="Assets\Scripts\sbombcontroller.cs" />
     <Compile Include="Assets\Scripts\startgame.cs" />
